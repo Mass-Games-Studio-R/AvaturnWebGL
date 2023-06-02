@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>{{{ PRODUCT_NAME }}}</title>
+    <title>Avaturn_Unity_WebGL_Example</title>
     <meta name="description" content="Example of WebGL, Unity, Avaturn">
     <link rel="stylesheet" href="data/style.css">
 </head>
@@ -22,28 +22,22 @@
 
 <script src="data/Global.js"></script>
 <script src="data/AvaturnFrame.js"></script>
-<script src="Build/{{{ LOADER_FILENAME }}}"></script>
+<script src="Build/Avaturn.loader.js"></script>
 <script>
     function unityShowBanner(msg, type) {
         
     }
     
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+    var loaderUrl = buildUrl + "/Avaturn.loader.js";
     var config = {
-        dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
-        frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
-        codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
-        #if MEMORY_FILENAME
-        memoryUrl: buildUrl + "/{{{ MEMORY_FILENAME }}}",
-        #endif
-        #if SYMBOLS_FILENAME
-        symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
-        #endif
+        dataUrl: buildUrl + "/Avaturn.data",
+        frameworkUrl: buildUrl + "/Avaturn.framework.js",
+        codeUrl: buildUrl + "/Avaturn.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "{{{ COMPANY_NAME }}}",
-        productName: "{{{ PRODUCT_NAME }}}",
-        productVersion: "{{{ PRODUCT_VERSION }}}",
+        companyName: "Avaturn",
+        productName: "Avaturn_Unity_WebGL_Example",
+        productVersion: "1.0",
         showBanner: unityShowBanner,
     };
 
